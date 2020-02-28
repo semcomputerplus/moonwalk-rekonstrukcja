@@ -18,6 +18,30 @@ body {
 .topContainer {
     background-color: #000000;
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.topInner {
+    flex-basis: 960px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topInner a {
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: center; 
+    margin: 1.5rem 0 ;
+} 
+
+.logoContainer a {
+  flex-basis: 960px;
+     
 }
 
 @media screen and (max-width:767px) {
