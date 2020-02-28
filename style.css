@@ -43,6 +43,86 @@ body {
     flex-basis: 960px;
 }
 
+.mainMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.mainMenu ul {
+    flex-basis: 960px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mainMenu ul li {
+    flex-basis: 100%;
+    text-align: center;
+    display: flex;
+}
+
+.mainMenu ul li a {
+    flex-basis: 100%;
+}
+
+.mainMenu ul li a:hover {
+    transform: rotate(180deg);
+    text-decoration: overline;
+}
+
+.heroImage {
+    position: relative;
+}
+
+.heroImage img {
+    width: 100%;
+    height: auto;
+}
+
+.heroImage h1 {
+    position: absolute;
+    top: 7rem;
+    right: 35rem;
+    color: #ffffff;
+    font-size: 4rem;
+    text-shadow: 0 0 1rem #000000;
+}
+
+.catContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 2rem auto;
+}
+
+.catInner {
+    flex-basis: 48%;
+    position: relative;
+    overflow: hidden;
+}
+
+.catInner img {
+    width: 100%;
+    height: auto;
+}
+
+.catInner h2 {
+    transition: top 1s;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 50%;
+    background: #ffffff;
+    mix-blend-mode: soft-light;
+    /*background: rgba(255,255,255,0.75);*/
+}
+
+.catInner:hover h2 {
+    top: 50%;
+}
 
 
 @media screen and (max-width:767px) {
