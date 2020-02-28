@@ -15,6 +15,11 @@ body {
     color: inherit;
 }
 
+.topContainer {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 @media screen and (max-width:767px) {
     *:focus {
         outline-color: transparent;
