@@ -18,6 +18,7 @@ body {
 .topContainer {
     background-color: #000000;
     color: #ffffff;
+    display: flex;
 }
 
 @media screen and (max-width:767px) {
