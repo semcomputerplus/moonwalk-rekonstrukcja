@@ -7,49 +7,121 @@
   <meta name="description" content="To jest główny plik HTML naszej strony i musi nazywać się index.html">
   <meta name="keywords" content="www,html,css,javascript,jquery,strony www">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="webfonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <div class="topContainer">
   <div class="topInner">
-    <a href="#"><img src="img/envelope.png" alt="">info@moonwalk.pl</a>
+    <a href="javascript:void(0)"><img src="img/envelope.png" alt=""><span>info@moonwalk.pl</span></a>
     <p>Darmowa dostawa od 200 zł</p>
-    <a href="#"><img src="img/avatar.png" alt="zaloguj się na swoje konto"></a>
+    <a href="javascript:void(0)"><img src="img/avatar.png" alt="zaloguj się na swoje konto"></a>
   </div>
 </div>
-  <div class="logoContainer"><a href="#"><img src="img/moonwalk_logo_h-1.png" alt="Logo - przejście na stronę główną"></a>
+  <div class="logoContainer"><a href="javascript:void(0)"><img src="img/moonwalk_logo_h-1.png" alt="Logo - przejście na stronę główną"></a>
   </div>
   <nav class="mainMenu">
     <ul>
-      <li><a href="#">Aktualności</a></li>
-      <li><a href="#">Wyprzedarz</a></li>
-      <li><a href="#">Dla psów</a></li>
-      <li><a href="#">Dla psiarzy</a></li>
-      <li><a href="#">Nowe trendy</a></li>
-      <li><a href="#">Promocje</a></li>
+      <li><a href="javascript:void(0)">Aktualności</a>
+      <ul>
+        <li><a href="javascript:void(0)">podpunkt 1</a></li>
+        <li><a href="javascript:void(0)">podpunkt 2</a></li>
+        <li><a href="javascript:void(0)">podpunkt 3</a></li>
+        <li><a href="javascript:void(0)">podpunkt 4</a></li>
+      </ul>
+      </li>
+      <li><a href="javascript:void(0)">Wyprzedarz</a></li>
+      <li><a href="javascript:void(0)">Dla psów</a></li>
+      <li><a href="javascript:void(0)">Dla psiarzy</a></li>
+      <li><a href="javascript:void(0)">Nowe trendy</a></li>
+      <li><a href="javascript:void(0)"><i class="fa fa-facebook-square"></i>Promocje</a></li>
     </ul>
   </nav>
 <div class="heroImage">
-  <img src="img/hero.png" alt="">
+  <picture>
+    <source media="(max-width: 767px)" srcset="img/herosmall.png">
+    <source media="(max-width: 959px)" srcset="img/heromedium.png">
+    <img src="img/hero.png" alt="">
+  </picture>
   <h1>Moonwalk</h1>
 </div>
   
   <div class="catContainer">
     <div class="catInner">
-      <a href="#">
+      <a href="javascript:void(0)">
         <img src="img/obroża-black-1.jpg" alt="">
-        <h2>Obroże</h2>
+        <h2>Smycze</h2>
       </a>
     </div>
     <div class="catInner">
-      <a href="#">
+      <a href="javascript:void(0)">
         <img src="img/obroża-pink-2-scaled.jpg" alt="">
-        <h2>Opaski</h2>
+        <h2>Obroże</h2>
       </a>
     </div>
   </div>
   
+<div class="bestContainer">
+  <h2>Bestsellery</h2>
+  <div class="bestProduct">
+    <a href="javascript:void(0)">
+      <img src="img/MG_5131-2-324x324.jpg" alt="">
+      <h3>Produkt 1</h3>
+      <p>Opis produkt 1</p>
+    </a>
+  </div>
+  <div class="bestProduct">
+    <a href="javascript:void(0)">
+      <img src="img/MG_5131-2-324x324.jpg" alt="">
+      <h3>Produkt 1</h3>
+      <p>Opis produkt 1</p>
+    </a>
+  </div>
+  <div class="bestProduct">
+    <a href="javascript:void(0)">
+      <img src="img/MG_5131-2-324x324.jpg" alt="">
+      <h3>Produkt 1</h3>
+      </p>Opis produkt 1</p>
+    </a>
+  </div>
+  <div class="bestProduct">
+    <a href="javascript:void(0)">
+      <img src="img/MG_5131-2-324x324.jpg" alt="">
+      <h3>Produkt 1</h3>
+      </p>Opis produkt 1</p>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footerContainer">
+    <ul>
+      <li><a  href="javascript:void(0)">Punkt 1</a></li>
+      <li><a  href="javascript:void(0)">Punkt 2</a></li>
+      <li><a  href="javascript:void(0)">Punkt 3</a></li>
+      <li><a  href="javascript:void(0)">Punkt 4</a></li>
+    </ul>
+    <ul>
+      <li><a  href="javascript:void(0)">Punkt 1</a></li>
+      <li><a  href="javascript:void(0)">Punkt 2</a></li>
+      <li><a  href="javascript:void(0)">Punkt 3</a></li>
+      <li><a  href="javascript:void(0)">Punkt 4</a></li>
+    </ul>
+    <ul>
+      <li><a  href="javascript:void(0)">Punkt 1</a></li>
+      <li><a  href="javascript:void(0)">Punkt 2</a></li>
+      <li><a  href="javascript:void(0)">Punkt 3</a></li>
+      <li><a  href="javascript:void(0)">Punkt 4</a></li>
+    </ul>
+    <ul>
+      <li><a  href="javascript:void(0)"><i class="fa fa-facebook-square"></i></a></li>
+      <li><a  href="javascript:void(0)"><i class="fa fa-instagram"></i></a></li>
+     
+    </ul>
+    <p>&copy; Moonwalk 2020</p>
+  </div>
+</footer>
   
   <!-- podłączenie jQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

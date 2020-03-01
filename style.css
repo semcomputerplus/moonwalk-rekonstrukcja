@@ -33,10 +33,19 @@ body {
   align-items: center;
 }
 
+.topInner a:hover {
+  background-color: #ff6600;
+}
+
 .logoContainer {
   display: flex;
   justify-content: center;
   margin: 1.5rem 0;
+}
+
+.logoContainer a:hover img {
+  transform: scale(1.5);
+  transition: 2s;
 }
 
 .logoContainer a {
@@ -60,15 +69,35 @@ body {
   flex-basis: 100%;
   text-align: center;
   display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.mainMenu ul li ul {
+  display: none;
+  background-color: #ffffff;
+}
+
+.mainMenu ul li:hover ul {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 3rem;
+  z-index: 1;
 }
 
 .mainMenu ul li a {
   flex-basis: 100%;
+  padding: 1rem 0;
 }
 
 .mainMenu ul li a:hover {
   transform: rotate(180deg);
   text-decoration: overline;
+}
+
+.mainMenu ul li ul li {
+  width: 160px;
 }
 
 .heroImage {
@@ -124,7 +153,153 @@ body {
   top: 50%;
 }
 
+.bestContainer {
+  max-width: 960px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bestContainer h2 {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.bestProduct {
+  flex-basis: 25%;
+  display: flex;
+  text-align: center;
+}
+
+.bestProduct a:hover img {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+.bestProduct img {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.bestProduct img {
+  width: 100%;
+  height: auto;
+}
+
+.bestContainer h2 {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
+}
+
+.footerContainer {
+  flex-basis: 960px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerContainer a:hover {
+  color: #ff6600;
+}
+.footerContainer p {
+  border-top: 1px solid #ffffff;
+  flex-basis: 100%;
+  padding: 1rem 0 0;
+}
+
+.footerContainer ul {
+  flex-basis: 25%;
+  padding: 0;
+  list-style: none;
+}
+.footerContainer ul:last-of-type {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 767px) {
+  *:focus {
+    outline-color: transparent;
+  }
+
+  .topInner p {
+    order: -1;
+    flex-grow: 2;
+  }
+  .topInner img + span {
+    color: olive;
+  }
+  .topInner {
+    padding: 0 1rem;
+  }
+
+  .topInner a {
+    width: 40px;
+    overflow: hidden;
+  }
+
+  .mainMenu ul {
+    flex-direction: column;
+  }
+
+  .mainMenu ul li ul {
+    display: none !important;
+  }
+  .logoContainer {
+    text-align: center;
+  }
+
+  .heroImage h1 {
+    position: static;
+    color: #ffffff;
+    text-shadow: unset;
+    margin: 0;
+    text-align: center;
+    background-color: tomato;
+    font-size: 2rem;
+  }
+  .catContainer {
+    flex-direction: column;
+    width: calc(100% - 4rem);
+  }
+
+  .bestContainer {
+    flex-direction: column;
+    width: calc(100% - 4rem);
+    justify-content: center;
+    width: calc(100% - 4rem);
+  }
+
+  .bestProduct {
+    margin: auto;
+  }
+
+  .catInner h2 {
+    top: 50%;
+  }
+
+  .footerContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .footerContainer ul:last-of-type {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
   *:focus {
     outline-color: transparent;
   }
