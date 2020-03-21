@@ -13,12 +13,11 @@
 
         .modalDialog {
             position: fixed;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 99999;
-            opacity: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 9999999999999999999;
+            opacity: 1;
             -webkit-transition: opacity 400ms ease-in;
             -moz-transition: opacity 400ms ease-in;
             transition: opacity 400ms ease-in;
@@ -27,12 +26,42 @@
         .closeModal {
             display: none;
         }
+
+        .minModal {
+            width: 20%;
+            height: 20%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            transform: none;
+        }
+
+        .minModal img {
+            width: 100%;
+        }
+
+
     </style>
 </head>
 
 <body>
+<div style="position: fixed;z-index: 2;height: 300px;width:100%;background-color: olive;">lorem</div>
+    <div style="height: 100vh;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius ex pariatur tempora ea molestias minima sequi mollitia laboriosam voluptatibus autem iusto suscipit voluptate, repellendus at beatae. Facere, aliquid! Laboriosam, voluptatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis debitis, ad voluptate ex accusantium rem, quae quisquam laborum cumque, totam temporibus facilis quod voluptas amet nihil aliquid itaque atque expedita.
+    Ipsa perspiciatis nam facere quibusdam, id dolore molestiae, consectetur accusantium nesciunt corporis neque quidem? Beatae fuga nesciunt a, magni expedita alias nemo quisquam vero id aspernatur dolores recusandae, quasi fugit!
+    Unde qui modi molestiae aspernatur nemo corrupti dicta quo molestias sit reiciendis ut, omnis atque ea repellendus officiis similique minus tempore magnam nam? Nulla distinctio, debitis necessitatibus nesciunt eveniet voluptas!
+    Fugiat, praesentium ipsam, voluptatem blanditiis cumque repellat cupiditate officiis repellendus, laborum nobis eveniet. Dignissimos vel similique earum est iure magni voluptatibus excepturi commodi unde? Repudiandae distinctio illo vel ab eligendi.
+    Rem, molestiae vero maxime enim dolorum illo dicta? Numquam, accusantium officiis quos esse vel neque alias ipsum dicta quam suscipit, amet consectetur animi fugiat earum voluptatum officia quas mollitia corrupti. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum perspiciatis voluptate error esse ut minus commodi praesentium tempore veniam id, reiciendis nesciunt, nihil quasi laborum enim, necessitatibus saepe. Nesciunt, voluptatibus.
+    Aliquid quaerat inventore maiores vel fugit ullam illum eaque blanditiis officia aliquam! Architecto sint, voluptatem distinctio soluta aliquam sapiente, optio omnis, aliquid natus reprehenderit quia ut quis maxime voluptas ad!
+    Sint, debitis accusantium? Ipsam repellendus veritatis, similique id, impedit enim iure in facere velit nihil, magni ipsum voluptates quisquam illum? Molestias saepe dignissimos hic tempora ullam facere eum quisquam mollitia?
+    Perferendis non ducimus dicta, doloribus esse similique quasi eos dolorem culpa architecto nam ullam ad maxime sed dignissimos officia laudantium unde temporibus in. Exercitationem corporis aperiam ipsum officiis dolore voluptatem!
+    Unde nam ad veritatis, nostrum sapiente magni sunt corrupti libero, iusto hic vitae, inventore enim accusantium quas velit harum deserunt odit facere fugit perferendis! Nesciunt numquam necessitatibus eligendi voluptatibus beatae.
+    Architecto saepe maxime sint quae perferendis quibusdam quaerat non enim, recusandae soluta distinctio, unde rem corporis aliquid eos odit repellendus. Architecto magnam sunt id incidunt? Et recusandae totam tempore ab?
+    Atque sequi quod ad, odit fugiat velit aut eaque modi architecto natus sint porro harum quos minima quisquam impedit, molestiae perferendis quas quaerat incidunt non temporibus. Temporibus nobis illo obcaecati?
+    Suscipit asperiores animi totam dignissimos numquam nemo ducimus cum autem tempore velit. In atque porro dolor enim animi ipsam eius mollitia ratione similique quibusdam. Illo soluta officiis perferendis necessitatibus! Similique?
+    In amet natus eius exercitationem sint culpa perferendis eos nihil ratione, nulla laborum, velit iusto, deserunt ex? Sit earum inventore delectus accusamus voluptatibus perferendis pariatur obcaecati. Molestiae eum recusandae temporibus.
+    Iusto eum tempore unde, sint hic delectus molestias ea ipsam praesentium error fugiat quae quam magni cum. Quae iusto harum, eos fugit amet aliquam aspernatur corporis libero quisquam porro consequatur?</div>
 
-    <div id="openModal" class="modalDialog">
+    <div id="koronawirus" class="modalDialog">
         <div>
             <a href="#close" title="Close" class="close">Zamknij</a>
             <div>
@@ -45,6 +74,33 @@
 
     <script>
 
+        function openPopup() {
+            window.location.hash = "koronawirus";
+        }
+
+        document.addEventListener("DOMContentLoaded", openPopup);
+
+        function closePopup() {
+            const escapeKey = event.key;
+            if ( escapeKey === "Escape" ) {
+                document.getElementById("koronawirus").classList.add("closeModal");
+            }
+        }
+
+        document.addEventListener("keydown", closePopup);
+        
+        function closeOnClick() {
+            document.getElementById("koronawirus").classList.add("closeModal");
+        }
+        
+        document.addEventListener("click", closeOnClick);
+
+        function minimizePopup() {
+            document.getElementById("koronawirus").classList.add("minModal");
+        }
+
+        document.addEventListener("scroll", minimizePopup);
+        
     </script>
 
 </body>
