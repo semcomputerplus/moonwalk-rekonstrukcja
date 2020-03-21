@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .modalDialog:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modalDialog {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 99999;
+            opacity: 0;
+            -webkit-transition: opacity 400ms ease-in;
+            -moz-transition: opacity 400ms ease-in;
+            transition: opacity 400ms ease-in;
+        }
+
+        .closeModal {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
 
     <div id="openModal" class="modalDialog">
         <div>
-          <a href="javascript:void(0);" title="Close" class="close">Zamknij</a>
+            <a href="#close" title="Close" class="close">Zamknij</a>
             <div>
-              <a href="http://stomatologiaumb.pl/koronawirus-covid-19-informacja/">
-                <img src="http://stomatologiaumb.pl/wp-content/uploads/koronawirus.jpg" alt="">
-              </a>
+                <a href="http://stomatologiaumb.pl/koronawirus-covid-19-informacja/">
+                    <img src="http://stomatologiaumb.pl/wp-content/uploads/koronawirus.jpg" alt="">
+                </a>
             </div>
         </div>
-      </div>
+    </div>
 
-      <script>
-          
-      </script>
-    
+    <script>
+
+    </script>
+
 </body>
+
 </html>
